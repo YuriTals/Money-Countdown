@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#22212C">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contador de Contagem Regressiva</title>
+        
+        <!-- PWA Manifest -->
+        <link rel="manifest" href="/src/Scripts/manifest.json">
+        
+        <!-- iOS Support -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Contagem Regressiva">
+        
+        <!-- Favicon and Icons -->
+        <link rel="icon" href="/src/Media/icon.png" type="image/x-icon">
+        <link rel="apple-touch-icon" href="/src/Media/icon-192x192.png">
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="/src/Styles/styles.css">
+    </head>
+<body>
+    <h1>Contagem Regressiva</h1>
+
+    <div class="main-wrapper">
+        <!-- Container para o primeiro contador: 13º 1ª parcela -->
+        <div class="counter">
+            <h2>13º salário</h2>
+            <h3>1ª parcela</h3>
+            <input type="datetime-local" id="dateInput1" />
+            <div id="countdown1">
+                <h3 id="daysRemaining1">0</h3>
+                <p id="timeRemaining1">00:00:00</p>
+            </div>
+        </div>
+
+        <!-- Container para o segundo contador: PLR/PPR 1ª parcela -->
+        <div class="counter">
+            <h2>PLR/PPR</h2>
+            <h3>1ª parcela</h3>
+            <input type="datetime-local" id="dateInput2" />
+            <div id="countdown2">
+                <h3 id="daysRemaining2">0</h3>
+                <p id="timeRemaining2">00:00:00</p>
+            </div>
+        </div>
+
+        <!-- Seção de Feriados -->
+        <div id="holidaySection">
+            <h2>Feriados do Ano</h2>
+            <div>
+                <ul>
+                    <li><strong>ABRIL:</strong>
+                        <ul>
+                            <li>18 de abril (sexta-feira) – Paixão de Cristo</li>
+                            <li>21 de abril (segunda-feira) – Tiradentes</li>
+                        </ul>
+                    </li>
+                    <li><strong>MAIO:</strong>
+                        <ul>
+                            <li>1º de maio (quinta-feira) – Dia Mundial do Trabalho</li>
+                        </ul>
+                    </li>
+                    <li><strong>JUNHO:</strong>
+                        <ul>
+                            <li>19 de junho (quinta-feira) – Corpus Christi</li>
+                        </ul>
+                    </li>
+                    <li><strong>SETEMBRO:</strong>
+                        <ul>
+                            <li>7 de setembro (domingo) – Independência do Brasil</li>
+                        </ul>
+                    </li>
+                    <li><strong>OUTUBRO:</strong>
+                        <ul>
+                            <li>12 de outubro (domingo) – Nossa Senhora Aparecida</li>
+                        </ul>
+                    </li>
+                    <li><strong>NOVEMBRO:</strong>
+                        <ul>
+                            <li>2 de novembro (domingo) – Finados</li>
+                            <li>15 de novembro (sábado) – Proclamação da República</li>
+                            <li>20 de novembro (quinta-feira) – Dia Nacional de Zumbi e da Consciência Negra</li>
+                        </ul>
+                    </li>
+                    <li><strong>DEZEMBRO:</strong>
+                        <ul>
+                            <li>24 de dezembro (quarta-feira) – Véspera de Natal</li>
+                            <li>25 de dezembro (quinta-feira) – Natal</li>
+                            <li>31 de dezembro (quarta-feira) – Véspera de Ano Novo</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Log the current location
+            console.log('Current Location:', window.location.href);
+            
+            // Try to create an image to test the path
+            const testImg = new Image();
+            testImg.src = '/src/Media/icon-192x192.png';
+            testImg.onerror = function() {
+                console.error('Failed to load image from: ' + this.src);
+            };
+            testImg.onload = function() {
+                console.log('Image loaded successfully from: ' + this.src);
+            };
+        
+            // Log all script and link tags to see if there's any unexpected path manipulation
+            const scripts = document.getElementsByTagName('script');
+            const links = document.getElementsByTagName('link');
+            
+            console.log('Scripts:', Array.from(scripts).map(s => s.src));
+            console.log('Links:', Array.from(links).map(l => l.href));
+        });
+    </script>
+    <script src="src/Scripts/script.js"></script>
+
+</body>
+</html>
