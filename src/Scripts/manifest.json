@@ -1,0 +1,21 @@
+{
+  "name": "Contador de Contagem Regressiva",
+  "short_name": "Contagem Regressiva",
+  "description": "Aplicativo para contagem regressiva de datas importantes",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#22212C",
+  "theme_color": "#22212C",
+  "icons": [
+      {
+          "src": "/src/Media/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      },
+      {
+          "src": "/src/Media/icon-512x512.png", 
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ]
+}

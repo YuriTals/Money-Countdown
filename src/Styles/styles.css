@@ -1,0 +1,147 @@
+/* Body */
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #22212C;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante altura total da viewport */
+    flex-direction: column;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    color: #D9D9D9;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Wrapper principal para conter os contadores e os feriados */
+.main-wrapper {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: stretch; /* Faz com que todos os itens tenham a mesma altura */
+    gap: 20px; /* Ajusta o espaçamento entre as divs */
+    width: 100%;
+    max-width: 1300px; /* Limita a largura máxima */
+    padding: 0 20px; /* Adiciona padding lateral para dispositivos menores */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que as divs se ajustem em várias linhas em telas menores */
+    box-sizing: border-box;
+}
+
+/* Estilo do contador e da seção de feriados */
+.counter, #holidaySection {
+    text-align: center;
+    background-color: #D9D9D9;
+    padding: 20px; /* Ajusta o padding para que fiquem mais compactos */
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(184, 184, 184, 0.1);
+    flex: 0 1 600px; /* Ajusta para a mesma largura máxima */
+    width: 100%;
+    max-width: 600px; /* Largura máxima das divs */
+    box-sizing: border-box;
+    margin: 0; /* Remove margens extras */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Subtítulo */
+h2, h3 {
+    font-size: 20px;
+    color: #7970A9;
+    margin-bottom: 10px;
+}
+
+/* Input de data e hora */
+input[type="datetime-local"] {
+    padding: 10px;
+    font-size: 16px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Contador de tempo */
+#countdown1, #countdown2 {
+    margin-top: auto; /* Empurra o conteúdo para baixo */
+    color: #7970A9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#daysRemaining1, #daysRemaining2 {
+    font-size: 48px;
+    color: #7970A9;
+}
+
+#timeRemaining1, #timeRemaining2 {
+    font-size: 18px;
+    color: #7970A9;
+}
+
+/* Seção de feriados (Mesma largura e estilo dos contadores) */
+#holidaySection {
+    text-align: center;
+    background-color: #D9D9D9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(184, 184, 184, 0.1);
+    flex: 0 1 600px; /* Impede que cresça além de 600px */
+    width: 100%;
+    max-width: 600px; /* Largura máxima dos feriados */
+    box-sizing: border-box;
+}
+
+/* Título da seção de feriados */
+#holidaySection h2 {
+    color: #7970A9;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Lista de feriados */
+#holidaySection ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 0.9em; /* Reduz a fonte para caber o conteúdo */
+    margin-top: auto; /* Empurra o conteúdo para baixo */
+}
+
+#holidaySection ul li {
+    margin-bottom: 8px; /* Diminui o espaçamento entre os itens */
+}
+
+#holidaySection ul li strong {
+    font-weight: bold;
+    color: #7970A9;
+}
+
+#holidaySection ul ul {
+    margin-left: 20px;
+}
+
+/* Ajuste para telas menores (Responsividade) */
+@media screen and (max-width: 768px) {
+    .main-wrapper {
+        flex-direction: column; /* Organiza as divs em coluna em telas menores */
+        align-items: center; /* Centraliza as divs no centro da tela */
+        gap: 15px; /* Ajusta o espaço entre as divs */
+        padding: 0 10px; /* Adiciona padding lateral em dispositivos menores */
+    }
+    
+    .counter, #holidaySection {
+        flex: 0 1 90%; /* Torna as divs mais flexíveis */
+        max-width: 100%; /* Permite que as divs se ajustem à tela */
+        margin-bottom: 20px; /* Adiciona um espaçamento inferior */
+    }
+}
